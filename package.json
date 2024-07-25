@@ -34,9 +34,9 @@
     "@nestjs/cli": "^10.4.2",
     "@nestjs/config": "^3.2.3",
     "@swc/cli": "^0.4.0",
-    "@swc/core": "^1.7.0",
+    "@swc/core": "^1.7.1",
     "@types/node": "^20.14.12",
     "prettier": "^3.3.3",
-    "rimraf": "^5.0.9"
+    "rimraf": "^6.0.1"
   }
 }
