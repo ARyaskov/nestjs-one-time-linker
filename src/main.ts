@@ -39,13 +39,12 @@ async function bootstrap() {
       },
     },
   })
-
+  app.setGlobalPrefix("api/v0")
   await app.register(fastifyCsrf)
   await app.register(fastifySecureSession, {
     secret: configService.get<string>("HTTP_SECURE_SESSION_SECRET"),
     salt: configService.get<string>("HTTP_SECURE_SESSION_SALT"),
   })
-  app.setGlobalPrefix("api/v0")
 
   const host = configService.get<string>("HOST") || "0.0.0.0"
   const port = configService.get<number>("PORT") || 3032

@@ -20,7 +20,7 @@ export class OneTimeLinkController {
   }
 
   @Get(":link")
-  async getValue(@Param("link") link: string): Promise<{ value: string }> {
+  async getValue(@Param("link") link: string): Promise<string> {
     const value = await this.oneTimeLinkService.getValue(link)
     if (value === null) {
       throw new HttpException(
@@ -28,6 +28,6 @@ export class OneTimeLinkController {
         HttpStatus.NOT_FOUND,
       )
     }
-    return { value }
+    return value
   }
 }
