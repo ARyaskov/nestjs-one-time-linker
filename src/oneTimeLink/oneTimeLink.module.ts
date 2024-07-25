@@ -1,6 +1,7 @@
 import { Module } from "@nestjs/common"
 import { OneTimeLinkService } from "./oneTimeLink.service"
 import { OneTimeLinkController } from "./oneTimeLink.controller"
+import { StorageModule } from "../storage/storage.module"
 
 @Module({
   imports: [StorageModule],
@@ -8,4 +9,4 @@ import { OneTimeLinkController } from "./oneTimeLink.controller"
   controllers: [OneTimeLinkController],
   exports: [OneTimeLinkService],
 })
-export class StorageModule {}
+export class OneTimeLinkModule {}

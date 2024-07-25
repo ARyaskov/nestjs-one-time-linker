@@ -45,6 +45,7 @@ async function bootstrap() {
     secret: configService.get<string>("HTTP_SECURE_SESSION_SECRET"),
     salt: configService.get<string>("HTTP_SECURE_SESSION_SALT"),
   })
+  app.setGlobalPrefix("api/v0")
 
   const host = configService.get<string>("HOST") || "0.0.0.0"
   const port = configService.get<number>("PORT") || 3032
